@@ -1,0 +1,20 @@
+const int MAX = 100000; 
+vector<ll> fact(MAX + 1, 1);
+vector<ll> invFact(MAX + 1, 1);
+
+void compute() {
+    for (int i = 2; i <= MAX; i++) {
+        fact[i] = fact[i - 1] * i % M;
+    }
+    
+    invFact[MAX] = binPow(1LL * fact[MAX], 1ll*M - 2); // Modular inverse of fact[MAX]
+    
+    for (int i = MAX - 1; i >= 1; --i) {
+        invFact[i] = invFact[i + 1] * (i + 1) % M;
+    }	
+}
+
+long long ncr(long long n, long long r) {
+    if (r > n || r < 0) return 0;
+    return (fact[n] * invFact[r] % M * invFact[n - r] % M) % M;
+}
