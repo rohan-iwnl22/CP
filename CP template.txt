@@ -92,6 +92,8 @@ template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_prin
 template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V>void _print(unordered_map<T, V> m) {cerr << "{ ";for (auto &p : m) {cerr << "{";_print(p.first); cerr << ": ";_print(p.second); cerr << "} ";}cerr << "}";}
+template <typename T, size_t N>void _print(T (&arr)[N]) {cerr << "[ ";for (size_t i = 0; i < N; i++) {cerr << arr[i] << " ";}cerr << "]";}
 // *************************
 // *  Happy Solving!        *
 // *************************
