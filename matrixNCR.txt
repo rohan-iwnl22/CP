@@ -1,0 +1,18 @@
+const int MOD = 1e9+7;
+
+template <typename T>
+vector<vector<T>> combinationMat(T rows, T cols) {
+    vector<vector<T>> ncr(rows + 1, vector<T>(cols + 1, 0));
+    
+    for (T i = 0; i <= rows; i++) {
+        ncr[i][0] = 1;
+    }
+    
+    for (T i = 1; i <= rows; i++) {
+        for (T j = 1; j <= min(i, cols); j++) {
+            ncr[i][j] = (ncr[i - 1][j] + ncr[i - 1][j - 1]) % M;
+        }
+    }
+    
+    return ncr;
+}
