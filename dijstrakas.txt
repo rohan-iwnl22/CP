@@ -1,0 +1,26 @@
+using Edge = pair<int, int>;
+void dijkstra(int N, vector<pair<int, int>> graph[], int source,vector<int>& distances) {
+    vector<int> visited(N, false);
+    
+    priority_queue<Edge, vector<Edge>, greater<Edge>> pq;
+    pq.push({0, source});
+    
+    distances[source] = 0;
+    visited[source] = true;
+    
+    while (!pq.empty()) {
+        int current_dist = pq.top().first;
+        int current_node = pq.top().second;
+        pq.pop();
+        
+        for (auto neighbor : graph[current_node]) {
+            int neighbor_dist = neighbor.first;
+            int neighbor_node = neighbor.second;
+            
+            if (current_dist + neighbor_dist < distances[neighbor_node]) {
+                distances[neighbor_node] = current_dist + neighbor_dist;
+                pq.push({distances[neighbor_node], neighbor_node});
+            }
+        }
+    }
+}
