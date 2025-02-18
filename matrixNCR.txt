@@ -1,3 +1,7 @@
+/*
+    only valid upto 1000 rows and 1000 cols
+*/
+
 const int MOD = 1e9+7;
 
 template <typename T>
