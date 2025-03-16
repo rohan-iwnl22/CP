@@ -13,10 +13,15 @@ using namespace std;
 #define vii vector<pair<int,int>>
 #define pii pair<int,int>
 #define mp make_pair
-#define bpc __builtin_popcount
-#define bpll __builtin_popcountll
+#define setcountsi __builtin_popcount
+#define setcountsll __builtin_popcountll
 #define ff first
 #define ss second
+#define all(x) (x).begin(),(x).end()
+#define rep(a,b)    for(ll i = a ; i < b; i++)
+#define repe(a,b)   for(ll i = a; i <= b; i++)
+#define repr(a,b)   for(ll i = a ; i> b; i--)
+#define repre(a,b)  for(ll i = a ;i >= b ;i--)
 
 typedef long long ll;
 typedef unsigned long long ull;
@@ -27,6 +32,10 @@ const int M = 1e9+7;
 template <typename T>
 void sortAD(vector<T>& arr) {
     sort(arr.begin(), arr.end(), greater<T>());
+}
+template <typename T>
+T ceil2(T a, T b){
+    return (a+b-1)/b;
 }
 template <typename T>
 void sortall(vector<T>& arr) {
@@ -94,9 +103,14 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V>void _print(unordered_map<T, V> m) {cerr << "{ ";for (auto &p : m) {cerr << "{";_print(p.first); cerr << ": ";_print(p.second); cerr << "} ";}cerr << "}";}
 template <typename T, size_t N>void _print(T (&arr)[N]) {cerr << "[ ";for (size_t i = 0; i < N; i++) {cerr << arr[i] << " ";}cerr << "]";}
+template <typename T>void _print(stack<T> s) {cerr << "[ ";stack<T> temp;while (!s.empty()) {temp.push(s.top());s.pop();}while (!temp.empty()) {cerr << temp.top() << " ";temp.pop();}cerr << "]";}
 // *************************
 // *  Happy Solving!        *
 // *************************
+int d8x[8] = { 0, 0, -1, 1, -1, 1, -1, 1 }; 
+int d8y[8] = { -1, 1, 0, 0, -1, -1, 1, 1 }; 
+int d4x[4] = {0,1,0,-1};
+int d4y[4] = {-1,0,1,0};
 
 void solve(){
     
