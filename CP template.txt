@@ -22,6 +22,8 @@ using namespace std;
 #define repe(a,b)   for(ll i = a; i <= b; i++)
 #define repr(a,b)   for(ll i = a ; i> b; i--)
 #define repre(a,b)  for(ll i = a ;i >= b ;i--)
+#define sz(a) (int)(a).size()
+#define ar array
 
 typedef long long ll;
 typedef unsigned long long ull;
@@ -104,6 +106,7 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 template <class T, class V>void _print(unordered_map<T, V> m) {cerr << "{ ";for (auto &p : m) {cerr << "{";_print(p.first); cerr << ": ";_print(p.second); cerr << "} ";}cerr << "}";}
 template <typename T, size_t N>void _print(T (&arr)[N]) {cerr << "[ ";for (size_t i = 0; i < N; i++) {cerr << arr[i] << " ";}cerr << "]";}
 template <typename T>void _print(stack<T> s) {cerr << "[ ";stack<T> temp;while (!s.empty()) {temp.push(s.top());s.pop();}while (!temp.empty()) {cerr << temp.top() << " ";temp.pop();}cerr << "]";}
+template <typename T, size_t N>void _print(array<T, N> arr){cerr << "[ ";for (size_t i = 0; i < N; ++i) {_print(arr[i]);if (i != N - 1) cerr << ", ";}cerr << " ]";}
 // *************************
 // *  Happy Solving!        *
 // *************************
@@ -113,7 +116,6 @@ int d4x[4] = {0,1,0,-1};
 int d4y[4] = {-1,0,1,0};
 
 void solve(){
-    
 }
 
 int main(){
