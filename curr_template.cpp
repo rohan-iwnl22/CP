@@ -1,6 +1,7 @@
 /*
     author : rxhanggs
 */
+
 #include<bits/stdc++.h>
 using namespace std;
 #define fastio ios_base::sync_with_stdio(false);cin.tie(NULL);
@@ -8,14 +9,23 @@ using namespace std;
 #define ss second
 #define all(x) (x).begin(),(x).end()
 #define sz(a) (int)(a).size()
+#define INF(T) std::numeric_limits<T>::max()
 
 /*
     Happy Coding
 */
 
-void solve(){
-    
-}
+// Problem Simplification
+/*
+*/
+
+// Observation
+/*
+*/
+
+// Strategy
+/*
+*/
 
 int main(){
     
@@ -27,7 +37,12 @@ int main(){
     
     fastio;
     int t = 1 ;
-    // cin >> t ;
+    //cin >> t ;
+
+    auto solve = [&]()->void{
+        
+    };
+
     while(t--){
         solve();
     }
