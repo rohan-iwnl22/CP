@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run with TLE Guard (CMD)",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "g++ -std=c++17 -O0 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && (start \"runprog\" /b \"${fileDirname}\\${fileBasenameNoExtension}.exe\") && (timeout /t 5 >nul & taskkill /f /fi \"WINDOWTITLE eq runprog\")"
+            ],
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "focus": false
+            }
+        }
+    ]
+}
